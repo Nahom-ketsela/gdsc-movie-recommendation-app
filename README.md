@@ -2,12 +2,12 @@
 A movie recommendation app for the react capstone project. 
 Done by team 9.
 
-team members 
-Nahom Ketsela 
-Elias Derbew 
-Hayat Hussen 
-Hilina Fiseha 
-Kenean Biru 
-Kenean Yilma 
-Khewlet Mohammed  
-Beamlak kagnew 
+team members 	  
+1.Nahom Ketsela 
+2.Elias Derbew 
+3.Hayat Hussen 
+4.Hilina Fiseha 
+5.Kenean Biru 
+6.Kenean Yilma 
+7.Khewlet Mohammed  
+8.Beamlak kagnew 
