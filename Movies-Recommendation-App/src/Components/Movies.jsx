@@ -5,7 +5,7 @@ function Movies(){
 
   const[Movies, setMovies] = useState([]);
 
-
+//rtyuiop
   useEffect(()=>{
     fetch("https://api.themoviedb.org/3/discover/movie?api_key=97f7490422c2cfab9e2f1045e6f6b524")
     .then(res =>res.json())
