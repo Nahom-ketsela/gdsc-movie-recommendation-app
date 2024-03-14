@@ -1,13 +1,12 @@
-import React from 'react'
-import HomePage from './Components/HomePage'
-
+import { FavoriteProvider } from './Components/FavoriteContext';
+import HomePage from './Components/HomePage';
 
 function App() {
   return (
-    <div>
- <HomePage/>
-    </div>
-  )
+    <FavoriteProvider>
+      <HomePage/>
+    </FavoriteProvider>
+  );
 }
 
-export default App
+export default App;
