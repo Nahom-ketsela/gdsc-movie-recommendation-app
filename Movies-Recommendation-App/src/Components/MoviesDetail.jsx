@@ -22,28 +22,32 @@ function MoviesDetail() {
 
   return (
     <div className="p-4 m-4">
-      {movie ? (
-        <div className="p-4 m-4 bg-white rounded-lg shadow-lg">
-          {!isImageLoaded && <div className="animate-pulse h-[25rem] w-[20rem] bg-gray-300 rounded-lg m-2"></div>}
+    {movie ? (
+      <div className="flex flex-row bg-gradient-to-r from-purple-900 to-indigo-900 rounded-lg shadow-lg overflow-hidden">
+        <div className="p-4">
+          {!isImageLoaded && <div className="animate-pulse h-full w-full bg-gray-300 rounded-lg"></div>}
           <img
-            className={`rounded-lg h-[25rem] w-[20rem] object-cover transition-transform duration-300 transform hover:scale-105 m-2 ${isImageLoaded ? '' : 'hidden'}`}
+            className={`rounded-lg object-cover transition-transform duration-300 transform hover:scale-105 ${isImageLoaded ? '' : 'hidden'}`}
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt={movie.title}
             onLoad={() => setIsImageLoaded(true)}
           />
-          <h2 className='font-serif font-bold text-2xl text-black m-2'>{movie.title}</h2>
-          <h2 className='font-mono font-bold text-xl text-black m-2'>{movie.release_date}</h2>
-          <h2 className='font-serif text-xl text-black m-2'>{movie.overview}</h2>
         </div>
-      ) : <h2 className='text-black m-2'>Loading ... </h2>}
+        <div className="p-4">
+          <h2 className='font-serif font-bold text-2xl text-black'>{movie.title}</h2>
+          <h2 className='font-mono font-bold text-xl text-black'>{movie.release_date}</h2>
+          <p className='font-serif text-xl text-black'>{movie.overview}</p>
+          <div className="mt-2">
+          <button onClick={addToFavorites}
+        className='font-serif font-bold h-[2.5rem] p-1 rounded-lg bg-blue-400 hover:bg-blue-500 active:bg-blue-400'>Add to Favorite 
+</button>
 
-      <div className="m-2">
-        <button onClick={addToFavorites}
-                className=' font-serif font-bold h-[2.5rem] p-1 rounded-lg bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-300 m-2'>Add
-          to Favorite ❤️
-        </button>
+          </div>
+        </div>
       </div>
-    </div>
+    ) : <h2 className='text-black m-2'>Loading ... </h2>}
+</div>
+
   );
 }
 
