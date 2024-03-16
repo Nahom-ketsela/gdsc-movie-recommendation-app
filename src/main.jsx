@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+<<<<<<< HEAD
 import './index.css'
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import movie from './assets/movie.png'
@@ -40,3 +41,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </FavoriteProvider>
 )
+=======
+import App from './App.jsx'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+>>>>>>> af5ac10ef0bcf22c962abe9e28dcd365798da736
