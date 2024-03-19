@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-
 function Movies({ searchTerm }) {
   const [movies, setMovies] = useState([]);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
